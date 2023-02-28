@@ -2,5 +2,7 @@
   import MainApp from "./lib/MainApp.svelte";
 </script>
 
-<MainApp />
+<main>
+  <MainApp />
+</main>
 

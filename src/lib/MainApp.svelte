@@ -1,12 +1,12 @@
 <script>
-    import Navbar from './layouts/navbar.svelte';
-    import Sidebar from './layouts/sidebar.svelte';
-
+    import { Router, Route } from 'svelte-navigator';
+    import Home from './Home.svelte';
 </script>
 
-<Navbar />
-<Sidebar />
+<div class="body">
 
-
-
-
+    <Router basepath={'/'}>
+        <Route path="" component={Home} />
+    </Router>
+    
+</div>

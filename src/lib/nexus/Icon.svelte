@@ -1,7 +1,8 @@
 <script>
     export let name = '';
-    export let width = '0';
-    export let height = '0';
+    export let width = '20px';
+    export let height = '20px';
+    export let color = 'black';
     export let icons = [
         {
             box: 18,
@@ -12,15 +13,31 @@
             box: 18,
             name: 'graph',
             svg: `<rect id="Canvas" fill="#ff13dc" opacity="0" width="18" height="18" /><path class="fill" d="M8,6.3305V1.365a.25748.25748,0,0,0-.294-.2535A7.976,7.976,0,0,0,3.514,3.193a.25551.25551,0,0,0,.0285.3895l4.0605,2.95A.25.25,0,0,0,8,6.3305Zm2-4.966v15.271a.25651.25651,0,0,0,.2935.253,7.993,7.993,0,0,0,0-15.7775A.25649.25649,0,0,0,10,1.3645ZM1,9a7.99651,7.99651,0,0,0,6.7065,7.8885A.25649.25649,0,0,0,8,16.6355V9.8535a.25.25,0,0,0-.103-.2L2.155,5.4795a.255.255,0,0,0-.378.092A7.936,7.936,0,0,0,1,9Z" />`
-        }
+        },
+        {
+            box: 18,
+            name:'create',
+            svg: `  <rect id="Canvas" fill="#ff13dc" opacity="0" width="18" height="18" /><path class="fill" d="M9,1a8,8,0,1,0,8,8A8,8,0,0,0,9,1Zm5,8.5a.5.5,0,0,1-.5.5H10v3.5a.5.5,0,0,1-.5.5h-1a.5.5,0,0,1-.5-.5V10H4.5A.5.5,0,0,1,4,9.5v-1A.5.5,0,0,1,4.5,8H8V4.5A.5.5,0,0,1,8.5,4h1a.5.5,0,0,1,.5.5V8h3.5a.5.5,0,0,1,.5.5Z" />`
+        },
+        {
+            box: 20,
+            name:'more',
+            svg: `<rect id="Canvas" fill="#ff13dc" opacity="0" width="18" height="18" /><circle class="fill" cx="4.5" cy="9" r="1.425" />  <circle class="fill" cx="9" cy="9" r="1.425" /><circle class="fill" cx="13.5" cy="9" r="1.425" />`
+        },
+        {
+            box: 15,
+            name:'filter',
+            svg: `<rect id="Canvas" fill="#ff13dc" opacity="0" width="18" height="18" /><path class="fill" d="M15.473,1H1.527a.5.5,0,0,0-.3935.8085L7,9.2945V16.95a.496.496,0,0,0,.84.412l1.9905-2.0765A.60949.60949,0,0,0,10,14.864V9.2945l5.8665-7.486A.5.5,0,0,0,15.473,1Z" />`
+        },
+        {
+            box: 15,
+            name:'add',
+            svg: `<rect id="Canvas" fill="#ff13dc" opacity="0" width="18" height="18" /><path class="fill" d="M14.5,8H10V3.5A.5.5,0,0,0,9.5,3h-1a.5.5,0,0,0-.5.5V8H3.5a.5.5,0,0,0-.5.5v1a.5.5,0,0,0,.5.5H8v4.5a.5.5,0,0,0,.5.5h1a.5.5,0,0,0,.5-.5V10h4.5a.5.5,0,0,0,.5-.5v-1A.5.5,0,0,0,14.5,8Z" />`
+        },
     ];
 
     let displayIcon = icons.find((e) => e.name === name);
 </script>
 <svg
   class={$$props.class}
-  viewBox="0 0 {displayIcon.box} {displayIcon.box}" width={width} height={height}>{@html displayIcon.svg}</svg>
-
-<style>
-
-</style>
+  viewBox="0 0 {displayIcon.box} {displayIcon.box}" fill={color} width={width} height={height}>{@html displayIcon.svg}</svg>
